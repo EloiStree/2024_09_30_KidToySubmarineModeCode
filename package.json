@@ -1,0 +1,23 @@
+
+{                                                                                
+  "name": "be.elab.submarinetoyrc",                              
+  "displayName": "Toy Submarine RC",                        
+  "version": "0.0.1",                         
+  "unity": "2018.1",                             
+  "unityRelease": "",                             
+  "description": "Some submarine usable as toy from remote control for game.",                         
+  "keywords": ["Script","Tool"],                       
+  "dependencies":{},     
+  "relatedPackages":{},     
+  "samples" : [],     
+  "author" : {
+"name":"Eloi Stree",
+"mail":"",
+"url":""},     
+  "repository":{
+"type":"Git",
+"url":"https://github.com/EloiStree/2024_09_30_KidToySubmarineModeCode.git",
+"footprint":"",
+"revision":""},     
+  "category": "Script"                   
+} 
