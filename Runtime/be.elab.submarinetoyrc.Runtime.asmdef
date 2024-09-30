@@ -1,14 +1,16 @@
-
-{                                                                   
-            "name": "be.elab.submarinetoyrc",          
+{
+    "name": "be.elab.submarinetoyrc",
+    "rootNamespace": "",
     "references": [
-],                                                              
-    "optionalUnityReferences": [],                                  
-    "includePlatforms": [],                                                  
-    "excludePlatforms": [],                                         
-    "allowUnsafeCode": false,                                       
-    "overrideReferences": false,                                    
-    "precompiledReferences": [],                                    
-    "autoReferenced": true,                                         
-    "defineConstraints": []                                         
-}                                                                   
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
