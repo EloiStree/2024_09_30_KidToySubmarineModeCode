@@ -75,7 +75,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3023554477656733094}
   m_Layer: 0
-  m_Name: Sering
+  m_Name: Syringe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,7 +159,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1280ce77ceb0b984da0e3a8557840ca6,
         type: 3}
       propertyPath: m_Name
-      value: SeringPusher
+      value: SyringePusher
       objectReference: {fileID: 0}
     - target: {fileID: 2575496226431740616, guid: 1280ce77ceb0b984da0e3a8557840ca6,
         type: 3}
@@ -243,7 +243,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1bb62257a132bb649ba6cfc45a91b54e,
         type: 3}
       propertyPath: m_Name
-      value: SeringOut
+      value: SyringeOut
       objectReference: {fileID: 0}
     - target: {fileID: 8281651248488233961, guid: 1bb62257a132bb649ba6cfc45a91b54e,
         type: 3}
@@ -322,7 +322,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b882f6e2789744a41980e62fb891fa8b,
         type: 3}
       propertyPath: m_Name
-      value: SeringTip
+      value: SyringeTip
       objectReference: {fileID: 0}
     - target: {fileID: 7737147618650904903, guid: b882f6e2789744a41980e62fb891fa8b,
         type: 3}
