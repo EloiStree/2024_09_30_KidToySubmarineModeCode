@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -53,5 +54,25 @@ public class SubmarineDiyPerksMono : MonoBehaviour
         m_whatToMove.transform.Translate(Vector3.forward * m_frontalMoveValue * m_frontMoveSpeed * Time.deltaTime);
         m_whatToMove.transform.Translate(Vector3.up * m_verticalMoveValue * m_verticalMoveSpeed * Time.deltaTime);
         m_whatToMove.transform.Translate(Vector3.right * m_lateralMoveValue * m_lateralMoveSpeed * Time.deltaTime);
+    }
+
+    public void GetLateralMove(out float percentLateral)
+    {
+        percentLateral = m_lateralMoveValue;
+    }
+
+    public void GetVerticalMove(out float percentVertical)
+    {
+        percentVertical = m_verticalMoveValue;
+    }
+
+    public void GetForwardMove(out float percentForward)
+    {
+        percentForward = m_frontalMoveValue;
+    }
+
+    public void GetLeftRightRotate(out float percentRotateLeftRight)
+    {
+        percentRotateLeftRight = m_rotateLeftRightValue;
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -43,5 +44,18 @@ public class SubmarineBrickMono : MonoBehaviour
         m_whatToMove.transform.Translate(Vector3.up * m_verticalMoveValue * m_verticalMoveSpeed * Time.deltaTime);
     }
 
+    public float GetFrontalMovePercent()
+    {
+        return m_frontalMoveValue;
+    }
 
+    public float GetHorizontalMovePercent()
+    {
+        return m_rotateLeftRightValue;
+    }
+
+    public float GetVerticalMovePercent()
+    {
+        return m_verticalMoveValue;
+    }
 }
