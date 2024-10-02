@@ -16,12 +16,26 @@ public class SubmarineHeightRangeClampMono : MonoBehaviour
 
     public float m_currentRadiusTop = 0.5f;
     public float m_currentRadiusDown = 0.5f;
+    public float m_radiusTopDown = 0;
+    public float m_radiusTopSubmarine = 0;
+    [Range(0,1)]
+    public float m_percentBoyancy = 0.5f;
+
+    public Color m_color= Color.magenta;
 
     private void Reset()
     {
         m_whatToMove = transform;
     }
 
+
+    public void Update()
+    {
+
+        Debug.DrawLine(m_topWaterAnchor.position, m_bottomWaterAnchor.position, m_color);
+        Debug.DrawLine(m_topWaterAnchor.position, m_submarineRadiusPointUp.position, m_color);
+
+    }
     void LateUpdate()
     {
 
@@ -42,14 +56,33 @@ public class SubmarineHeightRangeClampMono : MonoBehaviour
             m_submarineCenterPoint.position,
             m_submarineRadiusPointDown.position);
 
+        m_radiusTopDown= Vector3.Distance(
+            m_topWaterAnchor.position,
+            m_bottomWaterAnchor.position);
 
-        if(m_whatToMove.position.y > m_topWaterAnchor.position.y- m_currentRadiusTop)
+        m_radiusTopSubmarine = Vector3.Distance(
+            m_topWaterAnchor.position,
+            m_submarineCenterPoint.position);
+
+        m_percentBoyancy = m_radiusTopSubmarine / m_radiusTopDown;
+
+
+        downY = m_bottomWaterAnchor.position.y + m_currentRadiusDown;
+        upY = m_topWaterAnchor.position.y - m_currentRadiusTop;
+        submarineY = m_submarineCenterPoint.position.y;
+
+        if (submarineY > upY)
         {
-            m_whatToMove.position = new Vector3(m_whatToMove.position.x, m_topWaterAnchor.position.y - m_currentRadiusTop, m_whatToMove.position.z);
+            m_whatToMove.position = new Vector3(m_whatToMove.position.x, upY, m_whatToMove.position.z);
         }
-        if (m_whatToMove.position.y < m_bottomWaterAnchor.position.y+ m_currentRadiusDown)
+
+        if (submarineY < downY)
         {
-            m_whatToMove.position = new Vector3(m_whatToMove.position.x, m_bottomWaterAnchor.position.y + m_currentRadiusDown, m_whatToMove.position.z);
+            m_whatToMove.position = new Vector3(m_whatToMove.position.x, downY, m_whatToMove.position.z);
         }
+
     }
+    public float upY;
+    public float downY;
+    public float submarineY;
 }
